@@ -1,0 +1,19 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsl="http://www.w3.org/2001/XMLSchema-instance"
+             xsl:schemaLocation="http://java.sun.com/xml/ns/persistence"
+             version="1.0" >
+    <persistence-unit name="jpa-lab3-aula">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>model.Produto</class>
+        <properties>
+            <property name="dialect" value="org.hibernate.dialect.HSQLDialect"></property>
+            <property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbcDriver"></property>
+            <property name="javax.persistence.jdbc.url" value="jdbc:hsqldb:mem:aula"></property>
+            <property name="javax.persistence.jdbc.user" value="sa"></property>
+            <property name="javax.persistence.jdbc.password" value=""></property>
+            <property name="hibernate.show_sql" value="true"></property>
+            <property name="hibernate.hbm2dll.auto" value="create"></property>
+        </properties>
+    </persistence-unit>
+</persistence>
+
