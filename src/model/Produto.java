@@ -1,9 +1,14 @@
 package model;
 
+import com.sun.xml.internal.ws.developer.Serialization;
+
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
-public class Produto {
+public class Produto implements Serializable {
+
+    private static final long serialVersionUID = -2517851941873251699L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -46,5 +51,14 @@ public class Produto {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    @Override
+    public String toString() {
+        return "Produto{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                '}';
     }
 }
